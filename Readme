@@ -1,0 +1,52 @@
+This is the public repo for the Camp Goodtimes 2014 web site project
+This repo was originally started in January 2014 by Mike Dice (mikedice417@hotmail.com)
+
+The repo contains a Visual Studio project, originally created with Visual Studio 2013.
+
+Some details about the project:
+Use MVC 4
+.Net 4.0. Because my current web hosting provider does not support .Net 4.5
+  the proejct cannot use async/await features of .Net and thus the async 
+  Controller methods need to be written with the Async/Completed controller
+  pattern of days gone by (see MSDN). Please do not add a dependency on .Net 4.5 at this time.
+Keep all controller methods that do anything besides return a view async whenever possible
+  
+Here are the UI mocks that need to be implemented.
+Desktop
+http://invis.io/RVM0C9CA
+
+Mobile
+http://invis.io/W4M0CIRD 
+Notice there is a Desktop and a Mobile version. The UI needs to be reactive so it
+will be user friendly on both desktop and mobile devices.
+
+The current camp webiste is a temporary website that is implemented in Sharepoint hosted 
+on Office365
+http://www.thegoodtimesproject.org/
+
+We will be integrating the web site with at least one list in the existing Sharepoint site.
+This will allow the camp director to type in News articles in sharepoint and have them
+dynamically added to the Sharepoint. My current design is to turn the Sharepoint list into an
+RSS feed and consume the feed in the website. See an example of this in the Home Controller.
+
+If you are new to GitHub, like me you should RTFM on Github.com. Especially interesting
+are articles on forking and submitting pull requests. Also if you have ideas on improvements
+to how we are using GitHub let me know. Always happy to learn more about the GitHub.
+
+I am mainly using Visual Studio 2013 GitHub integration but I also like thist tool for Windows:
+http://windows.github.com/
+It gives you a nice Powershell command line for interacting with Git
+
+Nobody gets paid anything for doing work on this project :) But hours spent contributing
+to this project can be considered charitable work so if your day job employer reimburses you
+for hours spent doing charitable work don't forget to submit those hours. Don't forget too, 
+that the US gov will give you a break on your taxes too!
+
+Contacts list is below. Feel free to update with your contact info if you are going to contribute
+Developers
+Mike Dice (GitHub: mikedice, email: mikedice417@hotmail.com)
+
+PM
+Kyle Krum (email: kyle@thegoodtimesproject.org)
+
+
