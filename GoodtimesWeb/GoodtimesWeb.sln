@@ -13,18 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{422247
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://mikedice417.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = GoodtimesWeb.Tests\\GoodtimesWeb.Tests.csproj
-		SccProjectName1 = GoodtimesWeb.Tests
-		SccLocalPath1 = GoodtimesWeb.Tests
-		SccProjectUniqueName2 = GoodtimesWeb\\GoodtimesWeb.csproj
-		SccProjectName2 = GoodtimesWeb
-		SccLocalPath2 = GoodtimesWeb
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
