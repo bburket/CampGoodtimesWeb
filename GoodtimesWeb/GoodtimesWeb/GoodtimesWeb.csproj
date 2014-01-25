@@ -145,8 +145,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\gallery-menu-slides.css" />
     <Content Include="Content\images\layout\Goodtimes-top-banner.png" />
+    <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
     <Content Include="Content\images\slides\R111_0009.png" />
     <Content Include="Content\images\slides\R222_0007.jpg" />
     <Content Include="Content\images\slides\R333_0023.png" />
@@ -183,7 +183,7 @@
     <Content Include="Content\nivo\themes\light\bullets.png" />
     <Content Include="Content\nivo\themes\light\light.css" />
     <Content Include="Content\nivo\themes\light\loading.gif" />
-    <Content Include="Content\slides2.css" />
+    <Content Include="Content\SiteNew.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
@@ -197,12 +197,7 @@
     <Content Include="Scripts\external\jquery.slides3.0.0.js" />
     <Content Include="Scripts\external\jquery.slides3.0.0.min.js" />
     <Content Include="Scripts\external\_references.js" />
-    <Content Include="Scripts\gallery-menu-slides.js" />
-    <Content Include="Scripts\Gallery\gallerycontroller.js" />
-    <Content Include="Scripts\Gallery\galleryview.js" />
     <Content Include="Scripts\Site\sitecontroller.js" />
-    <Content Include="Scripts\Site\siteview.js" />
-    <Content Include="Scripts\slides2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -246,7 +241,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:20511/</IISUrl>
+          <IISUrl>http://localhost:54846/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

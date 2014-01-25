@@ -38,6 +38,9 @@ namespace GoodtimesWeb
                 "~/Content/gallery-menu-slides.css",
                 "~/Content/jquery-ui.redmond.css"));
 
+            bundles.Add(new StyleBundle("~/Content/SiteNewCss").Include(
+                "~/Content/siteNew.css"));
+
             bundles.Add(new StyleBundle("~/Content/css/nivo").Include(
                 "~/Content/nivo/nivo-slider.css",
                 "~/Content/nivo/themes/bar/bar.css",

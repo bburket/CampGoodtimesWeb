@@ -1,0 +1,118 @@
+﻿
+
+@media all /*and (min-width: 1000px)*/
+{
+    body
+    {
+        font-family: "Open Sans", sans-serif, "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+        background-color: #cccccc;
+        margin: 0px;
+    }
+
+    #content-container
+    {
+        max-width: 1280px;
+        width: 1280px;
+        margin: auto;
+        background-color: white;
+    }
+
+    /* Begin styles for the title banner */
+    #title-banner
+    {
+    }
+    
+    #action-banner-positioner
+    {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        height: 1%;
+    }
+
+    #action-nav-title-container
+    {
+        display:inline;
+        float: left;
+        margin-left: 100px;
+    }
+    #action-nav-title-container img
+    {
+        border: 0;
+        height: 60px;
+    }
+
+    #action-nav-menu-container
+    {
+        display:inline;
+        float:right;
+        margin-right: 100px;
+        padding-top: 10px;
+    }
+
+    #action-nav-menu
+    {
+        list-style-type: none;
+    }
+
+    #action-nav-menu li
+    {
+        display: inline;
+    }
+
+    #action-nav-menu li a,
+    #action-nav-menu li a:hover,
+    #action-nav-menu li a:active,
+    #action-nav-menu li a:visited,
+    #action-nav-menu li a:link
+    {
+        text-decoration: none;
+        padding: 10px 25px;
+        margin: 5px;
+        background-color: #cccccc;
+        color: #333333;
+        border-radius: 4px;
+    }
+
+    #info-banner-positioner
+    {
+        width: 100%;
+        background-color: #F2F2F2
+    }
+
+    #info-banner-container 
+    {
+        padding: 8px 0px;
+        margin: auto;
+        width: 60%;
+    }
+
+    #info-nav-menu
+    {
+        list-style-type: none;
+margin-left: 120px;
+margin-top: 5px;
+margin-bottom: 5px;
+        padding: 0;
+    }
+
+    #info-nav-menu li
+    {
+        display: inline;
+        padding: 5px 15px;
+    }
+
+    #info-nav-menu li a,
+    #info-nav-menu li a:hover,
+    #info-nav-menu li a:active,
+    #info-nav-menu li a:visited,
+    #info-nav-menu li a:link
+    {
+        text-decoration: none;
+        margin: 5px;
+        color: #333333;
+    }
+    
+    /* End Styles for the title banner */
+
+}

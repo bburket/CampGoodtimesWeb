@@ -4,39 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/SiteNewCss")
     @Styles.Render("~/Content/css/nivo")
 </head>
 <body>
-
+<div id="content-container">
     <div id="title-banner">
-        <div id="title-banner-image-holder">
-            <img id="title-banner-image" src="/Content/images/layout/Goodtimes-top-banner.png" alt="Camp Goodtimes"/>
+        <div id="action-banner-positioner">
+            <div id="action-nav-title-container">
+                <a href="@Url.Action("/")"><img src="/Content/images/layout/Goodtimesbanner-new.png" /></a>
+            </div>
+            <div id="action-nav-menu-container">
+                <ul id="action-nav-menu">
+                    <li><a href="@Url.Action("JoinUs", "Home")">JOIN US</a></li>
+                    <li><a href="@Url.Action("Volunteer", "Home")">VOLUNTEER</a></li>
+                    <li><a href="@Url.Action("Donate", "Home")">DONATE</a></li>
+                </ul>
+            </div>
         </div>
-
-        <ul id="title-banner-menu">
-            <li><a href="@Url.Action("/")">Home</a></li>
-            <li><a id="NewsletterMenuItem" href="@Url.Action("Newsletter", "Home")">Newsletter</a></li>
-            <li><a id="donate-menu-link" href="#">Donations</a>
-                <ul id="donate-menu">  
-                    <li id="donate-menu-item-inkind" ><a href="#">In Kind</a></li>
-                    <li id="donate-menu-item-inhonorof"><a  href="#">In Honor Of</a></li>
-                    <li id="donate-menu-item-donatenow"><a  href="#">Please Donate Now</a></li>
-                </ul>  
-            </li>
-            <li><a id="AboutUsMenuItem" href="@Url.Action("AboutUs", "Home")">About Us</a></li>
-            <li><a id="ContactUsMenuItem" href="@Url.Action("ContactUs", "Home")">Contact Us</a></li>
-        </ul>
+        <div id="info-banner-positioner">
+            <div id="info-banner-container">
+                <ul id="info-nav-menu">
+                    <li><a href="@Url.Action("WhoWeAre", "Who We Are")">WHO WE ARE</a></li>
+                    <li><a href="@Url.Action("WhatWeDo", "Home")">WHAT WE DO</a></li>
+                    <li><a href="@Url.Action("News", "Home")">NEWS</a></li>
+                    <li><a href="@Url.Action("Connect", "Home")">CONNECT</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     @RenderBody()
-
+</div>
     @Scripts.Render("~/bundles/external/jquery")
     @Scripts.Render("~/bundles/external/jqueryui")
     @Scripts.Render("~/bundles/external/jquery.nivo.slider")
-    @Scripts.Render("~/bundles/Gallery")
     @Scripts.Render("~/bundles/Site")
-    @Scripts.Render("~/bundles/Slides")
     @RenderSection("scripts", required: false)
 </body>
 </html>

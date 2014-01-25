@@ -1,6 +1,4 @@
-﻿// Copyright 2014, mike@twopairadice.com
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
