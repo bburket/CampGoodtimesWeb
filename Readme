@@ -3,6 +3,17 @@ This repo was originally started in January 2014 by Mike Dice (mikedice417@hotma
 
 The repo contains a Visual Studio project, originally created with Visual Studio 2013.
 
+The project is at
+https://github.com/mikedice/CampGoodtimesWeb
+
+Want to contribute? 
+1) Create yourself a fork
+2) Go to the issues list and create an issue that says what you will be working on
+   assign your issue to yourself. This is rudimentary feature management :)
+3) Implement your feature and test it.
+4) Submit a Pull request and I'll review the change and either pull it to the main
+   branch or request changes.
+
 Some details about the project:
 Use MVC 4
 .Net 4.0. Because my current web hosting provider does not support .Net 4.5
@@ -48,5 +59,3 @@ Mike Dice (GitHub: mikedice, email: mikedice417@hotmail.com)
 
 PM
 Kyle Krum (email: kyle@thegoodtimesproject.org)
-
-
