@@ -12,11 +12,21 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using Newtonsoft.Json;
 using System.Configuration;
+using HtmlAgilityPack;
+using GoodtimesWeb.Services;
 
 namespace GoodtimesWeb.Controllers
 {
     public class HomeController : AsyncController
     {
+        public const string FeedsKey = "feeds";
+        ISharepointService sharepointService;
+
+        public HomeController(ISharepointService sharepointService)
+        {
+            this.sharepointService = sharepointService;
+        }
+
         //
         // GET: /Home/
         public ActionResult Index()
@@ -56,55 +66,40 @@ namespace GoodtimesWeb.Controllers
         }
 
         // Old school Async!
-        public void GetMikeDiceTestFeedAsync()
+        public void GetCampDirectorNewsFeedAsync()
         {
             string url = ConfigurationManager.AppSettings["CampDirectorNewsItemsRssFeed"];
 
             AsyncManager.OutstandingOperations.Increment();
+
             try
             {
-                WebClient wc = new WebClient();
-                wc.DownloadStringCompleted += (sender, e) =>
+                this.sharepointService.GetDirectorNewsFeedAsync(url).ContinueWith((tc) => 
                 {
-
-                    try
+                    if (tc.Status == TaskStatus.RanToCompletion)
                     {
-                        List<MikeDiceTestListElement> feed = new List<MikeDiceTestListElement>();
-                        XDocument doc = XDocument.Parse(e.Result);
-                        var items = doc.Root.XPathSelectElements("channel/item");
-
-                        foreach (var item in items)
-                        {
-                            feed.Add(new MikeDiceTestListElement()
-                            {
-                                Title = item.Element("title").Value,
-                                Author = item.Element("author").Value,
-                                Description = item.Element("description").Value,
-                                PublishedOnGmt = DateTime.Parse(item.Element("pubDate").Value)
-
-                            });
-                        }
-
-                        AsyncManager.Parameters["feed"] = feed;
+                        AsyncManager.Parameters[FeedsKey] = tc.Result;
                     }
-                    finally
-                    {
-                        AsyncManager.OutstandingOperations.Decrement();
-                    }
-                };
-
-                wc.DownloadStringAsync(new Uri(url));
+                    AsyncManager.OutstandingOperations.Decrement();
+                });
             }
             catch
             {
-                AsyncManager.OutstandingOperations.Decrement();
+                AsyncManager.Parameters[FeedsKey] = new List<NewsFromTheDirectorElement>();
             }
         }
 
-        public ActionResult GetMikeDiceTestFeedCompleted(IEnumerable<MikeDiceTestListElement> feed)
+        public ActionResult GetCampDirectorNewsFeedCompleted(IEnumerable<NewsFromTheDirectorElement> feed)
         {
-            var content = JsonConvert.SerializeObject(feed);
-            return Content(content);
+            if (feed != null && feed.Any())
+            {
+                var content = JsonConvert.SerializeObject(feed);
+                return Content(content);
+            }
+            else
+            {
+                return Content("");
+            }
         }
     }
 }

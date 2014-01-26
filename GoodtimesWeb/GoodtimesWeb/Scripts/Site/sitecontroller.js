@@ -59,7 +59,7 @@ var SiteController = (function(){
 
             // async request to get the Sharepoint list from the camp director
             // todo: spinner??
-            $.getJSON("Home/GetMikeDiceTestFeed")
+            $.getJSON("Home/GetCampDirectorNewsFeed")
                 .done(function (result) {
                     PopulateBlogListFromJsonObject(result);
                 })
