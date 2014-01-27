@@ -115,4 +115,78 @@ margin-bottom: 5px;
     
     /* End Styles for the title banner */
 
+    /* Begin Index page content styling*/
+    #slideshow-container {
+        height: 540px;
+    }
+
+
+    #news-article-container {
+        display: table;
+        table-layout: fixed;
+        width: 25%;
+        /* TODO: play with Width% in jquery for fewer than three articles, width is 25% for 1 article, 50% for 2 articles, 75% for 3 articles, we show no more than three at a time */
+        margin: auto;
+        height: 241px;
+    }
+    #news-box-positioner {
+        display: table-row;
+    }
+    .news-article-box {
+        height: 125px;
+        display: table-cell;
+        padding: 15px;
+    }
+    .news-article-title {
+        font-size: 18pt;
+        line-height: 1.8em;
+        height: 1.8em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .news-article-date {
+        font-size: 14pt;
+        line-height: 1.8em;
+        height: 1.8em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+    .news-article-content {
+        font-size: 12pt;
+        text-overflow:ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        height: 7.2em;
+        line-height: 1.8em;
+    }
+    .news-article-more-link {
+        text-decoration: none;
+        padding: 10px 25px;
+        background-color: #cccccc;
+        color: #333333;
+        border-radius: 4px;
+    }    /* End Index page styling*/
+
+    /* Begin footer styling */
+   #footer-container {
+        height: 75px;     
+        background-color: #4a4d4a;   
+        text-align: center;
+        
+    }
+
+   #footer-content {
+        font-size:12pt;
+        padding-top: 20px;
+        color: #cccccc;
+        margin: 20px;
+
+    }
+
+   /* End footer styling */
+
+
 }

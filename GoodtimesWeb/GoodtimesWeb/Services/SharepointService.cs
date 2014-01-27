@@ -79,7 +79,11 @@ namespace GoodtimesWeb.Services
             {
                 feedItem.Title = result.First().NextSibling.InnerText.Trim();
             }
-
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='EventDate:']");
+            if (result.Any())
+            {
+                feedItem.EventDate = result.First().NextSibling.InnerText.Trim();
+            }
             return feedItem;
         }
     }

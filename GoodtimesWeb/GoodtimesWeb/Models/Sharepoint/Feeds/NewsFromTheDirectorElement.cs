@@ -9,5 +9,6 @@ namespace GoodtimesWeb.Models.Sharepoint.Feeds
         public string Description { get; set; }
         public bool IsVisible { get; set; }
         public DateTime PublishedOnGmt { get; set; }
+        public string EventDate { get; set; }
     }
 }

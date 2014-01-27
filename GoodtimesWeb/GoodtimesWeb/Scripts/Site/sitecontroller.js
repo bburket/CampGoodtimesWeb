@@ -35,14 +35,62 @@ var SiteController = (function(){
     }
 
     function PopulateBlogListFromJsonObject(jsonObject) {
+
+        var countToAdd = 0;
         for (i = 0; i < jsonObject.length; i++) {
-            $("#feed-list").append(
-                    $("<div>")
-                        .html(jsonObject[i].Title + " " + jsonObject[i].PublishedOnGmt)
-                        .append(
+            if (jsonObject[i].IsVisible) {
+                countToAdd++;
+                if (countToAdd >= 3) {
+                    break;
+                }
+            }
+        }
+
+        if (countToAdd == 0)
+        {
+            return;
+        }
+
+        // set the right width for the container
+        var containerLength = 25 * countToAdd;
+
+        $("#news-article-container").css("width", containerLength + "%");
+        var countAdded = 0;
+        for (i = 0; i < jsonObject.length; i++) {
+
+            if (jsonObject[i].IsVisible) {
+                
+                $("#news-box-positioner").append(
                             $("<div>")
-                            .html(jsonObject[i].Description))
-                        );
+                                .addClass("news-article-box")
+                                .append($("<div>")
+                                            .addClass("news-article-title")
+                                            .html(jsonObject[i].Title)
+                                        )
+                                .append($("<div>")
+                                            .addClass("news-article-date")
+                                            .html(jsonObject[i].EventDate)
+                                        )
+                                .append($("<div>")
+                                            .addClass("news-article-content")
+                                            .html(jsonObject[i].Description)
+                                        )
+
+                                .append($("<a>")
+                                            .addClass("news-article-more-link")
+                                            .attr("href", "#")
+                                            .html("More")
+                                        )
+
+                                  )
+
+                                
+
+
+                    if (countAdded >= countToAdd) {
+                        return;
+                    }
+            }
         }
 
     }

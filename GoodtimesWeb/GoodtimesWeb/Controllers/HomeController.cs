@@ -89,11 +89,11 @@ namespace GoodtimesWeb.Controllers
             }
         }
 
-        public ActionResult GetCampDirectorNewsFeedCompleted(IEnumerable<NewsFromTheDirectorElement> feed)
+        public ActionResult GetCampDirectorNewsFeedCompleted(IEnumerable<NewsFromTheDirectorElement> feeds)
         {
-            if (feed != null && feed.Any())
+            if (feeds != null && feeds.Any())
             {
-                var content = JsonConvert.SerializeObject(feed);
+                var content = JsonConvert.SerializeObject(feeds);
                 return Content(content);
             }
             else
