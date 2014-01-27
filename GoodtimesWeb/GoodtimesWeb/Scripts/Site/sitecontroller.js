@@ -84,9 +84,6 @@ var SiteController = (function(){
 
                                   )
 
-                                
-
-
                     if (countAdded >= countToAdd) {
                         return;
                     }
