@@ -51,18 +51,15 @@ var SiteController = (function(){
             return;
         }
 
-        // set the right width for the container
-        var containerLength = 25 * countToAdd;
 
-        $("#news-article-container").css("width", containerLength + "%");
         var countAdded = 0;
         for (i = 0; i < jsonObject.length; i++) {
 
             if (jsonObject[i].IsVisible) {
                 
-                $("#news-box-positioner").append(
+                $("#news-article-container").append(
                             $("<div>")
-                                .addClass("news-article-box")
+                                .addClass("news-article-box-pre")
                                 .append($("<div>")
                                             .addClass("news-article-title")
                                             .html(jsonObject[i].Title)
@@ -72,8 +69,11 @@ var SiteController = (function(){
                                             .html(jsonObject[i].EventDate)
                                         )
                                 .append($("<div>")
-                                            .addClass("news-article-content")
-                                            .html(jsonObject[i].Description)
+                                            .addClass("news-article-content-spacer")
+                                            .append($("<p>")
+                                                .addClass("news-article-content")
+                                                .html(jsonObject[i].Description)
+                                                .wrap("<div>"))
                                         )
 
                                 .append($("<a>")
@@ -89,7 +89,39 @@ var SiteController = (function(){
                     }
             }
         }
+        $("#news-article-container .news-article-box-pre").each(function (i, box) { elipsifyJqueryContentByHeight($(box).find(".news-article-content"), $(box), "news-article-box-pre", "news-article-box", 100) });
 
+    }
+
+    function elipsifyJqueryContentByHeight(elem, parent, preClass, postClass, overflowMaxHeight) {
+
+        if (elem.height() > overflowMaxHeight) {
+            var wordsTrimmed = 0;
+            do {
+                var text = elem.html();
+                text = text.slice(0, text.lastIndexOf(" "));
+                elem.html(text);
+                wordsTrimmed++;
+
+            } while (elem.height() > overflowMaxHeight);
+            if (wordsTrimmed > 0) {
+                var text = elem.html();
+                text = text + " ...";
+                elem.html(text);
+            }
+        }
+        parent.removeClass(preClass).addClass(postClass);
+    }
+
+    function InitializeSlideractionMenu() {
+        $(".slideshow-action-menu-container-menuitem").click(function (ev) {
+            if (ev.target.id == "slideshow-action-menuitem-joinus") {
+            }
+            else if (ev.target.id == "slideshow-action-menuitem-volunteer") {
+            }
+            else if (ev.target.id == "slideshow-action-menuitem-donate") {
+            }
+        });
     }
     
     // public interface
@@ -101,6 +133,9 @@ var SiteController = (function(){
 
             // Initialize the Nivo Slider
             $('#slider').nivoSlider();
+
+            // Initialize slider action menu
+            InitializeSlideractionMenu();
 
             // async request to get the Sharepoint list from the camp director
             // todo: spinner??

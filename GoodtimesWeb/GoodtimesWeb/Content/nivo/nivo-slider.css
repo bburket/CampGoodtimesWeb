@@ -63,8 +63,8 @@
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	background:#000;
 	color:#fff;
+    text-align: center;
 	width:100%;
 	z-index:8;
 	padding: 5px 10px;
