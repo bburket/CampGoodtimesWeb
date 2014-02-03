@@ -24,13 +24,8 @@ namespace GoodtimesWeb
             "~/Scripts/Gallery/gallerycontroller.js",
             "~/Scripts/Gallery/galleryview.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/Site").Include(
-            "~/Scripts/Site/sitecontroller.js",
-            "~/Scripts/Site/siteview.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/Slides").Include(
-                "~/Scripts/slides2.js",
-                "~/Scripts/gallery-menu-slides.js"));
+            bundles.Add(new ScriptBundle("~/bundles/HomePage").Include(
+            "~/Scripts/Site/sitecontroller.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",

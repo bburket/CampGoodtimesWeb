@@ -24,17 +24,17 @@
     
     #action-banner-positioner
     {
-        width: 80%;
+        width: 850px;
         margin: auto;
         overflow: hidden;
-        height: 1%;
     }
 
     #action-nav-title-container
     {
-        display:inline;
-        float: left;
-        margin-left: 100px;
+        display:inline-block;
+        position: relative;
+        top: 10px;
+        margin-left: 50px;
     }
     #action-nav-title-container img
     {
@@ -44,15 +44,16 @@
 
     #action-nav-menu-container
     {
-        display:inline;
-        float:right;
-        margin-right: 100px;
-        padding-top: 10px;
+        display:inline-block;
+        position: relative;
+        top: -8px;
     }
 
     #action-nav-menu
     {
         list-style-type: none;
+        padding: 0;
+      
     }
 
     #action-nav-menu li
@@ -176,6 +177,11 @@ margin-bottom: 5px;
         margin-left: 5px;
         margin-right: 5px;
         width: 300px;
+    }
+
+    #news-article-loading-box
+    {
+        padding-top: 20px;
     }
 
     .news-article-title {

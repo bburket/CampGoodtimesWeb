@@ -17,22 +17,14 @@ namespace GoodtimesWeb.Tests
     public class ControllerTests
     {
         [TestMethod]
-        public void TestGetCampeDirectorNewsFeed()
+        public async void TestGetCampeDirectorNewsFeed()
         {
             var homeController = CreateHomeController();
-            var completedEvent = new AutoResetEvent(false);
 
-            homeController.AsyncManager.Finished += (sender, ev) => completedEvent.Set();
-            homeController.GetCampDirectorNewsFeedAsync();
-            completedEvent.WaitOne();
-
-            Assert.IsTrue(homeController.AsyncManager.Parameters.ContainsKey(HomeController.FeedsKey));
-            Assert.IsNotNull(homeController.AsyncManager.Parameters[HomeController.FeedsKey]);
-            var actionResult = homeController.GetCampDirectorNewsFeedCompleted(homeController.AsyncManager.Parameters[HomeController.FeedsKey] as IEnumerable<NewsFromTheDirectorElement>);
+            var actionResult = await homeController.GetCampDirectorNewsFeedAsync();
             Assert.IsNotNull(actionResult);
             Assert.IsTrue(actionResult is ContentResult);
             var contentResult = actionResult as ContentResult;
-            
             
             Assert.IsNotNull(contentResult.Content);
             var list = JsonConvert.DeserializeObject<IEnumerable<NewsFromTheDirectorElement>>(contentResult.Content);

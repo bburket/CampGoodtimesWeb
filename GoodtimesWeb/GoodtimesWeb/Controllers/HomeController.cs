@@ -34,72 +34,49 @@ namespace GoodtimesWeb.Controllers
             return View();
         }
 
-        // GET: /Newsletter/
-        public ActionResult Newsletter()
+        public ActionResult JoinUs()
         {
             return View();
         }
 
-        public ActionResult AboutUs()
+        public ActionResult Volunteer()
         {
             return View();
         }
 
-        public ActionResult ContactUs()
+        public ActionResult Donate()
         {
             return View();
         }
 
-        public ActionResult InKind()
+        public ActionResult WhoWeAre()
         {
             return View();
         }
 
-        public ActionResult InHonorOf()
+        public ActionResult WhatWeDo()
+        {
+            return View();
+        }
+        
+        public ActionResult News()
+        {
+            return View();
+        }
+        
+        public ActionResult Connect()
         {
             return View();
         }
 
-        public ActionResult DonateNow()
-        {
-            return View();
-        }
-
-        // Old school Async!
-        public void GetCampDirectorNewsFeedAsync()
+        public async Task<ActionResult> GetCampDirectorNewsFeedAsync()
         {
             string url = ConfigurationManager.AppSettings["CampDirectorNewsItemsRssFeed"];
 
-            AsyncManager.OutstandingOperations.Increment();
-
-            try
-            {
-                this.sharepointService.GetDirectorNewsFeedAsync(url).ContinueWith((tc) => 
-                {
-                    if (tc.Status == TaskStatus.RanToCompletion)
-                    {
-                        AsyncManager.Parameters[FeedsKey] = tc.Result;
-                    }
-                    AsyncManager.OutstandingOperations.Decrement();
-                });
-            }
-            catch
-            {
-                AsyncManager.Parameters[FeedsKey] = new List<NewsFromTheDirectorElement>();
-            }
-        }
-
-        public ActionResult GetCampDirectorNewsFeedCompleted(IEnumerable<NewsFromTheDirectorElement> feeds)
-        {
-            if (feeds != null && feeds.Any())
-            {
-                var content = JsonConvert.SerializeObject(feeds);
-                return Content(content);
-            }
-            else
-            {
-                return Content("");
-            }
+            var feeds = await this.sharepointService.GetDirectorNewsFeedAsync(url);
+            feeds.OrderByDescending(article => article.PublishedOnGmt);
+            var content = JsonConvert.SerializeObject(feeds);
+            return Content(content);
         }
     }
 }

@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/external/jquery")
+    @Scripts.Render("~/bundles/external/jqueryui")
+    @RenderSection("scripts", required: false)
     @Styles.Render("~/Content/SiteNewCss")
     @Styles.Render("~/Content/css/nivo")
 </head>
@@ -25,7 +28,7 @@
         <div id="info-banner-positioner">
             <div id="info-banner-container">
                 <ul id="info-nav-menu">
-                    <li><a href="@Url.Action("WhoWeAre", "Who We Are")">WHO WE ARE</a></li>
+                    <li><a href="@Url.Action("WhoWeAre", "Home")">WHO WE ARE</a></li>
                     <li><a href="@Url.Action("WhatWeDo", "Home")">WHAT WE DO</a></li>
                     <li><a href="@Url.Action("News", "Home")">NEWS</a></li>
                     <li><a href="@Url.Action("Connect", "Home")">CONNECT</a></li>
@@ -40,10 +43,5 @@
         <div id="footer-content"><span>(c)2014 TheGoodtimesProject.org</span><span style="margin-left: 30px;">Website by MikeDice.Creative</span></div>
     </div>
 </div>
-    @Scripts.Render("~/bundles/external/jquery")
-    @Scripts.Render("~/bundles/external/jqueryui")
-    @Scripts.Render("~/bundles/external/jquery.nivo.slider")
-    @Scripts.Render("~/bundles/Site")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
