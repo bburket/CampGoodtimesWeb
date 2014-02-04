@@ -27,6 +27,13 @@ namespace GoodtimesWeb
             bundles.Add(new ScriptBundle("~/bundles/HomePage").Include(
             "~/Scripts/Site/sitecontroller.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/JoinUs").Include(
+            "~/Scripts/Site/joinus.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Volunteer").Include(
+            "~/Scripts/Site/volunteer.js",
+            "~/Scripts/Site/tabButtons.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",
                 "~/Content/slides2.css",
@@ -34,7 +41,10 @@ namespace GoodtimesWeb
                 "~/Content/jquery-ui.redmond.css"));
 
             bundles.Add(new StyleBundle("~/Content/SiteNewCss").Include(
-                "~/Content/siteNew.css"));
+                "~/Content/siteNew.css",
+                "~/Content/JoinUs.css",
+                "~/Content/tabButtons.css",
+                "~/Content/volunteer.css"));
 
             bundles.Add(new StyleBundle("~/Content/css/nivo").Include(
                 "~/Content/nivo/nivo-slider.css",

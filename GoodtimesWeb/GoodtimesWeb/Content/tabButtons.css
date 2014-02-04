@@ -1,0 +1,45 @@
+﻿#menuPositioner
+{
+    width: 475px;
+    position: absolute;
+    top: 405px;
+    margin-left:403px;
+}
+.tabButtons
+{
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    color: #333333;
+    font-weight: 800;
+    font-size: 22px;
+    background-color:rgba(242,242,242,0.6);
+}
+
+#volunteer-yearround
+{
+    margin-left: 50px;
+}
+
+.tabButtons-selected
+{
+    color: white;
+}
+.tabButtons:hover
+{
+    cursor:pointer
+}
+.tabButtons p
+{
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+.tabButtonsImage
+{
+    position: relative;
+    top: 21px;
+    display:none;
+    width: 25px;
+    margin: auto;
+}

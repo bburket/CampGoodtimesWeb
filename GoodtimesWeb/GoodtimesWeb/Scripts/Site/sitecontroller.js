@@ -47,7 +47,7 @@ var SiteController = (function(){
 
                                 .append($("<a>")
                                             .addClass("news-article-more-link")
-                                            .attr("href", "/Home/News")
+                                            .attr("href", "/News")
                                             .html("More")
                                         )
 
@@ -122,13 +122,13 @@ var SiteController = (function(){
     function InitializeSlideractionMenu() {
         $(".slideshow-action-menu-container-menuitem").click(function (ev) {
             if (ev.target.id == "slideshow-action-menuitem-joinus") {
-                window.location = "/Home/JoinUs";
+                window.location = "/JoinUs";
             }
             else if (ev.target.id == "slideshow-action-menuitem-volunteer") {
-                window.location = "/Home/Volunteer";
+                window.location = "/Volunteer";
             }
             else if (ev.target.id == "slideshow-action-menuitem-donate") {
-                window.location = "/Home/Donate";
+                window.location = "/Donate";
             }
         });
     }

@@ -143,7 +143,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ServiceConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ConnectController.cs" />
+    <Compile Include="Controllers\DonateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JoinUsController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
+    <Compile Include="Controllers\WhatWeDoController.cs" />
+    <Compile Include="Controllers\WhoWeAreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,6 +162,7 @@
   <ItemGroup>
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
     <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
+    <Content Include="Content\images\layout\tab-triangle.png" />
     <Content Include="Content\images\slides\eight.jpg" />
     <Content Include="Content\images\slides\five.jpg" />
     <Content Include="Content\images\slides\four.jpg" />
@@ -172,6 +180,7 @@
     <Content Include="Content\images\staff\puck.jpg" />
     <Content Include="Content\images\staff\weezerphoto.jpg" />
     <Content Include="Content\images\staff\wings.jpg" />
+    <Content Include="Content\JoinUs.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.redmond.css" />
     <Content Include="Content\nivo\nivo-slider.css" />
@@ -192,6 +201,8 @@
     <Content Include="Content\nivo\themes\light\light.css" />
     <Content Include="Content\nivo\themes\light\loading.gif" />
     <Content Include="Content\SiteNew.css" />
+    <Content Include="Content\tabButtons.css" />
+    <Content Include="Content\volunteer.css" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\TwoPairadice.com.pubxml" />
@@ -204,7 +215,10 @@
     <Content Include="Scripts\external\jquery.slides3.0.0.js" />
     <Content Include="Scripts\external\jquery.slides3.0.0.min.js" />
     <Content Include="Scripts\external\_references.js" />
+    <Content Include="Scripts\Site\joinus.js" />
     <Content Include="Scripts\Site\sitecontroller.js" />
+    <Content Include="Scripts\Site\tabButtons.js" />
+    <Content Include="Scripts\Site\volunteer.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -217,13 +231,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\JoinUs.cshtml" />
-    <Content Include="Views\Home\Volunteer.cshtml" />
-    <Content Include="Views\Home\Donate.cshtml" />
-    <Content Include="Views\Home\WhoWeAre.cshtml" />
-    <Content Include="Views\Home\WhatWeDo.cshtml" />
-    <Content Include="Views\Home\News.cshtml" />
-    <Content Include="Views\Home\Connect.cshtml" />
+    <Content Include="Views\JoinUs\Index.cshtml" />
+    <Content Include="Views\Volunteer\Index.cshtml" />
+    <Content Include="Views\Donate\Index.cshtml" />
+    <Content Include="Views\WhoWeAre\Index.cshtml" />
+    <Content Include="Views\WhatWeDo\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Connect\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
