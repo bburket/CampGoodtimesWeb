@@ -1,5 +1,77 @@
-﻿@{
+﻿@using GoodtimesWeb.Models.Donate
+@model IEnumerable<DonorElement>
+
+@{
     ViewBag.Title = "Donate";
 }
 
-<h2>Donate Placeholder</h2>
+
+<div id="volunteer-nav-container">
+    <img id="donate-image" src="/Content/images/slides/four.jpg" />
+    <div id="menuPositioner">
+        <div class="tabButtons" id="donate-monetary">
+            <p>MONETARY</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+        <div class="tabButtons" id="donate-inkind">
+            <p>IN-KIND</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+    </div>
+</div>
+
+
+<div id="donate-content"></div>
+<div id="Monetary">
+    <p class="donatemonetary-intro">In the week before their departure to Arrakis, when all the final scurrying about had reached a nearly unbearable frenzy, an old crone came to visit the mother of the boy, Paul. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather.</p>
+
+    <div id="donate-online-action-button">DONATE ONLINE</div>
+    <p class="donate-content">or by check</p>
+    <p class="donate-content"></p>
+    <p class="donate-content">Make check out to LOREM<br />Address<br/>Address</p>
+
+    <H2 class="donate-heading">DONATIONS IN HONOR OF...</H2>
+    <p class="donate-content">In the week before their departure to Arrakis, when all the final scurrying about had reached a nearly unbearable frenzy, an old crone came to visit the mother of the boy, Paul. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather.</p>
+
+    <table id="donors-list-table">
+    @foreach (var el in Model)
+    {
+        <tr><td>@string.Format("{0} in honor of {1}", el.Donor, el.InHonorOf)</td></tr>
+    }
+    </table>
+</div>
+
+<div id="InKind">
+   <p class="donate-content">An ellipsoid desk with a top of jade-pink petrified elacca wood stood at the center of the room. Veriform suspensor chairs ringed it, two of them occupied. In one sat a dark-haired youth of about sixteen years, round of face and with sullen eyes. The other held a slender, short man with effeminate face.</p>
+
+<div id="in-kind-lists-container">
+    <H2 class="in-kind-heading">Arts & Crafts</H2>
+    <ul class="donate-list">
+        <li class="donate-list-item">item1</li>
+        <li class="donate-list-item">item2</li>
+        <li class="donate-list-item">item3</li>
+        <li class="donate-list-item">item4</li>
+        <li class="donate-list-item">item5</li>
+    </ul>
+
+    <H2 class="in-kind-heading">Carnival</H2>
+    <ul class="donate-list">
+        <li class="donate-list-item">item1</li>
+        <li class="donate-list-item">item2</li>
+        <li class="donate-list-item">item3</li>
+        <li class="donate-list-item">item4</li>
+        <li class="donate-list-item">item5</li>
+    </ul>
+
+    <H2 class="in-kind-heading">Staff and Kinds</H2>
+    <ul class="donate-list">
+        <li class="donate-list-item">item1</li>
+        <li class="donate-list-item">item2</li>
+        <li class="donate-list-item">item3</li>
+        <li class="donate-list-item">item4</li>
+        <li class="donate-list-item">item5</li>
+    </ul>
+</div>
+</div>
+
+@Scripts.Render("~/bundles/Donate")

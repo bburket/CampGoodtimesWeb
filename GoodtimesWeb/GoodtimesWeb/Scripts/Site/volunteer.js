@@ -4,15 +4,15 @@
 var VolunteerController = (function () {
 
     function ShowCampAndEvent() {
-        $("#YearRoundContent").hide();
+        //$("#YearRoundContent").hide();
         $("#volunteer-content").html($("#CampAndEventContent").html());
-        $("#CampAndEventContent").show();
+        //$("#CampAndEventContent").show();
     }
 
     function ShowYearRound() {
-        $("#CampAndEventContent").hide();
+        //$("#CampAndEventContent").hide();
         $("#volunteer-content").html($("#YearRoundContent").html());
-        $("#YearRoundContent").show();
+        //$("#YearRoundContent").show();
     }
 
     // public interface

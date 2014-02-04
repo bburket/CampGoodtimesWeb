@@ -34,6 +34,10 @@ namespace GoodtimesWeb
             "~/Scripts/Site/volunteer.js",
             "~/Scripts/Site/tabButtons.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/Donate").Include(
+            "~/Scripts/Site/donate.js",
+            "~/Scripts/Site/tabButtons.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",
                 "~/Content/slides2.css",
@@ -44,7 +48,8 @@ namespace GoodtimesWeb
                 "~/Content/siteNew.css",
                 "~/Content/JoinUs.css",
                 "~/Content/tabButtons.css",
-                "~/Content/volunteer.css"));
+                "~/Content/volunteer.css",
+                "~/Content/donate.css"));
 
             bundles.Add(new StyleBundle("~/Content/css/nivo").Include(
                 "~/Content/nivo/nivo-slider.css",
