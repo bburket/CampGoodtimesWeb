@@ -186,6 +186,7 @@
     <Content Include="Content\JoinUs.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.redmond.css" />
+    <Content Include="Content\news.css" />
     <Content Include="Content\nivo\nivo-slider.css" />
     <Content Include="Content\nivo\themes\bar\arrows.png" />
     <Content Include="Content\nivo\themes\bar\bar.css" />
@@ -221,6 +222,7 @@
     <Content Include="Scripts\external\_references.js" />
     <Content Include="Scripts\Site\donate.js" />
     <Content Include="Scripts\Site\joinus.js" />
+    <Content Include="Scripts\Site\news.js" />
     <Content Include="Scripts\Site\sitecontroller.js" />
     <Content Include="Scripts\Site\tabButtons.js" />
     <Content Include="Scripts\Site\volunteer.js" />

@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Threading.Tasks;
-using GoodtimesWeb.Models.Sharepoint.Feeds;
-using System.Net;
-using System.Net.Http;
-using System.Xml;
-using System.Xml.Linq;
-using System.Xml.XPath;
+﻿using GoodtimesWeb.Services;
 using Newtonsoft.Json;
 using System.Configuration;
-using HtmlAgilityPack;
-using GoodtimesWeb.Services;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace GoodtimesWeb.Controllers
 {
     public class HomeController : AsyncController
     {
-        public const string FeedsKey = "feeds";
         ISharepointService sharepointService;
 
         public HomeController(ISharepointService sharepointService)
