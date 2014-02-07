@@ -1,7 +1,4 @@
-﻿@using GoodtimesWeb.Models.Donate
-@model IEnumerable<DonorElement>
-
-@{
+﻿@{
     ViewBag.Title = "Donate";
 }
 
@@ -33,12 +30,7 @@
     <H2 class="donate-heading">DONATIONS IN HONOR OF...</H2>
     <p class="donate-content">In the week before their departure to Arrakis, when all the final scurrying about had reached a nearly unbearable frenzy, an old crone came to visit the mother of the boy, Paul. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather.</p>
 
-    <table id="donors-list-table">
-    @foreach (var el in Model)
-    {
-        <tr><td>@string.Format("{0} in honor of {1}", el.Donor, el.InHonorOf)</td></tr>
-    }
-    </table>
+    @Html.Action("InHonorOf", "Donate");
 </div>
 
 <div id="InKind">

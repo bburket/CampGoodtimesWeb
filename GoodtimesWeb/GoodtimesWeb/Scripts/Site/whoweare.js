@@ -1,7 +1,7 @@
 ﻿// whoweare.js
 // copyright 2014, mikedice417@hotmail.com
 
-var VolunteerController = (function () {
+var WhoWeAreController = (function () {
 
     function ShowHistory() {
          $("#whoweare-content").html($("#HistoryContent").html());
@@ -126,5 +126,5 @@ var VolunteerController = (function () {
 
 $(document).ready(function () {
 
-    VolunteerController.Initialize();
+    WhoWeAreController.Initialize();
 });

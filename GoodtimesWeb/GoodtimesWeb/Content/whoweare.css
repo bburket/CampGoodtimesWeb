@@ -88,3 +88,16 @@
     padding-top: 50px;
     text-align: center;
 }
+
+.donors-titles
+{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.donors-content 
+{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}

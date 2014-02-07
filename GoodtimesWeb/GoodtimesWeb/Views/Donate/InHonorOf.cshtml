@@ -1,0 +1,9 @@
+﻿@using GoodtimesWeb.Models.Donate
+@model IEnumerable<DonorElement>
+
+<table id="donors-list-table">
+    @foreach (var el in Model)
+    {
+        <tr><td>@string.Format("{0} in honor of {1}", el.Donor, el.InHonorOf)</td></tr>
+    }
+</table>

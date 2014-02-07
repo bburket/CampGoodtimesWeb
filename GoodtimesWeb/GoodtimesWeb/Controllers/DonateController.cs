@@ -10,16 +10,21 @@ namespace GoodtimesWeb.Controllers
 {
     public class DonateController : Controller
     {
-        //
-        // GET: /Donate/
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        //
+        // GET: /InHonorOf/
+        public ActionResult InHonorOf()
         {
             List<DonorElement> donorsList = new List<DonorElement>();
 
             string path = Server.MapPath("/Content/DonationsData/Donations.csv");
             if (!io.File.Exists(path))
             {
-                return View();
+                return PartialView();
             }
 
             using (io.StreamReader reader = new io.StreamReader(path))
@@ -60,7 +65,7 @@ namespace GoodtimesWeb.Controllers
             }
             donorsList.OrderByDescending(el => el.Date);
 
-            return View(donorsList);
+            return PartialView(donorsList);
         }
 
     }

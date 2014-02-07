@@ -14,6 +14,12 @@ namespace GoodtimesWeb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Camps",
+                url: "WhatWeDo/Camps/{campName}",
+                defaults: new { controller = "WhatWeDo", action = "Camps" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -208,6 +208,7 @@
     <Content Include="Content\StaffData\staff.json" />
     <Content Include="Content\tabButtons.css" />
     <Content Include="Content\volunteer.css" />
+    <Content Include="Content\whatwedo.css" />
     <Content Include="Content\whoweare.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\DonationsData\Donations.csv" />
@@ -228,6 +229,7 @@
     <Content Include="Scripts\Site\sitecontroller.js" />
     <Content Include="Scripts\Site\tabButtons.js" />
     <Content Include="Scripts\Site\volunteer.js" />
+    <Content Include="Scripts\Site\whatwedo.js" />
     <Content Include="Scripts\Site\whoweare.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -248,6 +250,8 @@
     <Content Include="Views\WhatWeDo\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Connect\Index.cshtml" />
+    <Content Include="Views\Donate\InHonorOf.cshtml" />
+    <Content Include="Views\WhatWeDo\Goodtimes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
