@@ -1,0 +1,90 @@
+﻿#whoweare-nav-container
+{
+    position: relative;
+}
+
+
+#whoweare-menuPositioner
+{
+    width: 775px;
+    position: absolute;
+    top: 405px;
+    margin-left:270px;
+}
+
+#HistoryContent
+{
+    display:none;
+}
+
+#history-title
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.history-content
+{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+#history-image
+{
+    width: 60%;
+    margin: auto;
+    margin-left: 20%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#StaffAndBoardContent
+{
+    display:none;
+}
+
+#DonorsContent
+{
+    display:none;
+}
+#board-table
+{
+    display: table;
+}
+.board-table-row
+{
+    display:table-row;
+    
+}
+.board-table-row-cell
+{
+    display: table-cell;
+    width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.staff-table-row
+{
+    display:table-row;
+    
+}
+.staff-table-row-cell
+{
+    display: table-cell;
+    width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.staff-titles
+{
+    padding-top: 50px;
+    text-align: center;
+}

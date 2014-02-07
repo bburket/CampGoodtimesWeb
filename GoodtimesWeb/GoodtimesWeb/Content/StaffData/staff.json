@@ -1,0 +1,58 @@
+﻿[
+    {
+    "name":"Brick \"Bacon\" Spangler",
+    "title":"Vice President",
+    "image":"BaconHeadshot.jpg",
+    "bio":"Environmental Program Manager at the Port of Seattle, Seaport division.  On staff at Camp Goodtimes since 2006",
+    "position":"board"
+    },
+    {
+    "name":"Jonathan \"The Finance Guy\" Werner",
+    "title":"Treasurer​​",
+    "image":"Jon.jpg",
+    "bio":"Works at Amazon.com as the Director, AWS Finance for Apps, Games, and Services.  Parent of Micheala, 2x camper and leukemia survivor.",
+    "position":"board"
+    },
+    {
+    "name":"Corrine \"Pu​ck\" Hoeppner",
+    "title":"ARNP",
+    "image":"puck.jpg",
+    "bio":"Oncology Nurse and Nurse Practitioner since 1988.  Currently on staff in the Oncology Clinic at Seattle Children’s Hospital. Has participated in Oncology camps since 1991, medical staff at Camp Goodtimes since 2001.",
+    "position":"board"
+    },
+    {
+    "name":"Erin \"Weezer\" Wilson",
+    "title":"Vice President​",
+    "image":"weezerphoto.jpg",
+    "bio":"Has a masters degree in counseling psychology.  Works in Special Education for the Seattle Public Schools.  Has been on staff with Camp Goodtimes since 2002.",
+    "position":"board"
+    },
+    {
+    "name":"Kyle \"Wasabi\" Krum",
+    "title":"President​",
+    "image":"KylePhoto.jpg",
+    "bio":"Works for Microsoft in Advanced Strategies and Research as a Senior Program Manager. Has been on staff at Camp Goodtimes since 2005",
+    "position":"board"
+    },
+    {
+    "name":"Alia \"Wings\" Ahmed",
+    "title":"",
+    "image":"wings.jpg",
+    "bio":"Alia is an attorney and partner at the Bellevue Office for Wong Fleming.  Alia received a Bachelor of Arts from the University of Washington in English and Political Science and her Juris Doctor from Seattle University School of Law.  Alia began volunteering at Camp Goodtimes in 2001.",
+    "position":"board"
+    },
+    {
+    "name":"Carol \"Domino\" Mastenbrook",
+    "title":"carol@thegoodtimesproject.org",
+    "image":"carolwebsitepic.jpg",
+    "bio":"Executive Director for The Goodtimes Project. Carol is responsible for establishing business operations and for fund development. Carol brings over twenty years of executive leadership and consulting for non-profit and for-profit organizations. A former human resources executive, Carol stepped out of corporate work and began working with non-profits in order to better serve her community.",
+    "position":"staff"
+    },
+    {
+    "name":"Gus \"Beef\" Peterson",
+    "title":"gus@thegoodtimesproject.org",
+    "image":"GusBeefPeterson.jpg",
+    "bio":"Director of Programming for The Goodtimes Project. Gus brings varied experience in event production, volunteer empowerment and leadership, and all aspects of summer camp.  At every step in his career, he has found resonance in simply engaging passionate people towards purposeful and tangible goals.",
+    "position":"staff"
+    }
+]

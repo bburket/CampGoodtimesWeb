@@ -205,8 +205,10 @@
     <Content Include="Content\nivo\themes\light\light.css" />
     <Content Include="Content\nivo\themes\light\loading.gif" />
     <Content Include="Content\SiteNew.css" />
+    <Content Include="Content\StaffData\staff.json" />
     <Content Include="Content\tabButtons.css" />
     <Content Include="Content\volunteer.css" />
+    <Content Include="Content\whoweare.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\DonationsData\Donations.csv" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
@@ -226,6 +228,7 @@
     <Content Include="Scripts\Site\sitecontroller.js" />
     <Content Include="Scripts\Site\tabButtons.js" />
     <Content Include="Scripts\Site\volunteer.js" />
+    <Content Include="Scripts\Site\whoweare.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -2,4 +2,44 @@
     ViewBag.Title = "WhoWeAre";
 }
 
-<h2>WhoWeAre PlaceHolder</h2>
+<div id="whoweare-nav-container">
+    <img id="whoweare-image" src="/Content/images/slides/four.jpg" />
+    <div id="whoweare-menuPositioner">
+        <div class="tabButtons" id="whoweare-historybutton">
+            <p>HISTORY</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+        <div class="tabButtons" id="whoweare-staffandboardbutton">
+            <p>STAFF & BOARD</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+        <div class="tabButtons" id="volunteer-donorsbutton">
+            <p>DONORS</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+    </div>
+</div>
+<div id="whoweare-content"></div>
+<div id="HistoryContent">
+    <h2 id="history-title">THIS IS OUR STORY</h2>
+    <p class="history-content">In the week before their departure to Arrakis, when all the final scurrying about had reached a nearly unbearable frenzy, an old crone came to visit the mother of the boy, Paul. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather.</p>
+    <img id="history-image" src="/Content/images/slides/five.jpg"/>
+    <p class="history-content">In the week before their departure to Arrakis, when all the final scurrying about had reached a nearly unbearable frenzy, an old crone came to visit the mother of the boy, Paul. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. It was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather.</p>
+</div>
+
+<div id="StaffAndBoardContent">
+    <h2 class="staff-titles">BOARD</h2>
+    <div id="board-table">
+    <!-- filled in from javascript -->
+    </div>
+    <h2 class="staff-titles">STAFF</h2>
+    <div id="staff-table">
+    <!-- filled in from javascript -->
+    </div>
+</div>
+
+<div id="DonorsContent">
+    DonorsContent
+</div>
+
+@Scripts.Render("~/bundles/WhoWeAre")
