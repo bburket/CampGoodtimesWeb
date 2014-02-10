@@ -20,6 +20,12 @@ namespace GoodtimesWeb
             );
 
             routes.MapRoute(
+                name: "Events",
+                url: "WhatWeDo/Events/{eventName}",
+                defaults: new { controller = "WhatWeDo", action = "Events" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

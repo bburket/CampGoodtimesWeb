@@ -10,5 +10,8 @@ namespace GoodtimesWeb.Services
     public interface ISharepointService
     {
         Task<IEnumerable<NewsFromTheDirectorElement>> GetDirectorNewsFeedAsync(string newsFeedUrl);
+        Task<IEnumerable<CampEventElement>> GetCampeEventsAsync(string newsFeedUrl);
     }
 }
+
+

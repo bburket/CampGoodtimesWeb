@@ -17,20 +17,31 @@ namespace GoodtimesWeb.Services
     {
         public Task<IEnumerable<NewsFromTheDirectorElement>> GetDirectorNewsFeedAsync(string newsFeedUrl)
         {
-            var tcs = new TaskCompletionSource<IEnumerable<NewsFromTheDirectorElement>> ();
+            return GetNewsFeedAsync(newsFeedUrl, ParseNewsFromTheDirectorFeedItem);
+        }
+
+        public Task<IEnumerable<CampEventElement>> GetCampeEventsAsync(string newsFeedUrl)
+        {
+            return GetNewsFeedAsync(newsFeedUrl, ParseCampEventItem);
+
+        }
+
+        private Task<IEnumerable<TElem>> GetNewsFeedAsync<TElem>(string newsFeedUrl, Func<XElement, TElem> elementParser)
+        {
+            var tcs = new TaskCompletionSource<IEnumerable<TElem>>();
 
             var wc = new WebClient();
             wc.DownloadStringCompleted += (sender, e) =>
             {
                 try
                 {
-                    var feed = new List<NewsFromTheDirectorElement>();
-                   
+                    var feed = new List<TElem>();
+
                     XDocument doc = XDocument.Parse(e.Result);
                     var items = doc.Root.XPathSelectElements("channel/item");
                     foreach (var item in items)
                     {
-                        feed.Add(ParseNewsFromTheDirectorFeedItem(item));
+                        feed.Add(elementParser(item));
                     }
                     tcs.SetResult(feed.AsReadOnly());
                 }
@@ -43,6 +54,10 @@ namespace GoodtimesWeb.Services
             wc.DownloadStringAsync(new Uri(newsFeedUrl));
             return tcs.Task;
         }
+
+
+
+
 
         private NewsFromTheDirectorElement ParseNewsFromTheDirectorFeedItem(XElement feedXml)
         {
@@ -60,6 +75,49 @@ namespace GoodtimesWeb.Services
             if (result.Any())
             {
                 feedItem.IsVisible = result.First().NextSibling.InnerText.Trim().ToLower().Equals("yes") ? true : false;
+            }
+
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='Created:']");
+            if (result.Any())
+            {
+                feedItem.PublishedOnGmt = DateTime.Parse(result.First().NextSibling.InnerText.Trim());
+            }
+
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='Created By:']");
+            if (result.Any())
+            {
+                feedItem.Author = result.First().NextSibling.InnerText.Trim();
+            }
+
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='Title:']");
+            if (result.Any())
+            {
+                feedItem.Title = result.First().NextSibling.InnerText.Trim();
+            }
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='EventDate:']");
+            if (result.Any())
+            {
+                feedItem.EventDate = result.First().NextSibling.InnerText.Trim();
+            }
+            return feedItem;
+        }
+
+        private CampEventElement ParseCampEventItem(XElement feedXml)
+        {
+            var htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(feedXml.Element("description").Value);
+            var feedItem = new CampEventElement();
+
+            var result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='DetailsPageName:']");
+            if (result.Any())
+            {
+                feedItem.DetailsPageName = result.First().NextSibling.InnerText.Trim();
+            }
+
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='ShowOnWebSite:']");
+            if (result.Any())
+            {
+                feedItem.ShowOnWebsite = result.First().NextSibling.InnerText.Trim().ToLower().Equals("yes") ? true : false;
             }
 
             result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='Created:']");

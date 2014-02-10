@@ -1,0 +1,51 @@
+﻿
+@using GoodtimesWeb.Models.WhatWeDo
+@model CampsIndexViewModel
+
+<div id="camps-nav-container">
+    <img id="camps-nav-image" src="/Content/images/slides/eight.jpg" />
+    @if (Model != null)
+    {
+        if (Model.CampTitle != null && Model.CampDate != null)
+        {
+            <div id="camp-title-block">
+                <h2>@Model.CampTitle</h2>
+                <h4>@Model.CampDate</h4>
+            </div>
+        }
+    }
+
+    <div id="menuPositioner">
+        <div class="tabButtons" id="camps-details-button">
+            <p>CAMP DETAILS</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+        <div class="tabButtons" id="camps-volunteer-button">
+            <p>VOLUNTEER</p>
+            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+        </div>
+    </div>
+</div>
+<div id="camp-content"></div>
+<div id="selected-camp-partial">
+    @if (Model != null)
+    {
+        if (Model.SelectedCamp.Equals("Goodtimes", StringComparison.OrdinalIgnoreCase))
+        {
+            @Html.Partial("Camps/Goodtimes");
+        }
+        if (Model.SelectedCamp.Equals("Kayak", StringComparison.OrdinalIgnoreCase))
+        {
+            @Html.Partial("Camps/Kayak");
+        }
+        if (Model.SelectedCamp.Equals("Ski", StringComparison.OrdinalIgnoreCase))
+        {
+            @Html.Partial("Camps/Ski");
+        }
+    }
+</div>
+<div id="camp-volunteer-content">
+
+</div>
+
+@Scripts.Render("~/bundles/Camps")

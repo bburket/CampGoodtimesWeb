@@ -1,0 +1,6 @@
+﻿@using GoodtimesWeb.Models.WhatWeDo
+@model EventsViewModel
+
+
+@{string count = Model.EventsList != null ? Model.EventsList.Count().ToString() : (0).ToString();}
+events partial event count: @count

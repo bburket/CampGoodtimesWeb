@@ -1,0 +1,14 @@
+﻿
+@using GoodtimesWeb.Models.WhatWeDo
+@model EventsViewModel
+
+Events Index
+<div id="selected-event-partial">
+    @if (Model != null)
+    {
+        if (!string.IsNullOrWhiteSpace(Model.SelectedEvent))
+        {
+           @Html.Partial("Events/" + Model.SelectedEvent);
+        }
+        }
+</div>
