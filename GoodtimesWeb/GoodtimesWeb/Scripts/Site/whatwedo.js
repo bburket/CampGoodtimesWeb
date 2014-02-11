@@ -10,7 +10,7 @@ var WhatWeDoController = (function () {
 
     function ShowCampsComplete(result) {
         $("#whatwedo-content").html(result);
-        InitializeCampButtons();
+        InitializeLearnMoreButtons();
     }
 
     function ShowEvents() {
@@ -21,6 +21,7 @@ var WhatWeDoController = (function () {
     function ShowEventsComplete(result)
     {
         $("#whatwedo-content").html(result);
+        InitializeLearnMoreButtons();
     }
 
     function ShowScholorships() {
@@ -30,6 +31,7 @@ var WhatWeDoController = (function () {
 
     function ShowScholarshipsComplete(result) {
         $("#whatwedo-content").html(result);
+        InitializeLearnMoreButtons();
     }
 
     function Get(url, completionFunc) {
@@ -40,7 +42,7 @@ var WhatWeDoController = (function () {
         })
         .error(function (error) {
             HideLoadingIndicator();
-            alert(error);
+            alert(error.status + " " + error.statusText);
         });
     }
 
@@ -68,21 +70,17 @@ var WhatWeDoController = (function () {
     }
 
 
-    function InitializeCampButtons() {
+    function InitializeLearnMoreButtons() {
         
-        $(".camps-learn-more-button").click(function (ev) {
+        $(".whatwedo-partial-learn-more-button").click(function (ev) {
 
-            var val = $(ev.target).attr("data-learn-more");
-            if (val != null)
+            var learnMoreClass = $(ev.target).attr("data-learn-more-class");
+            var learnMoreId = $(ev.target).attr("data-learn-more-id");
+            if (learnMoreClass != null && learnMoreId != null)
                 {
-                window.location = "/WhatWeDo/Camps/" + val;
+                window.location = "/WhatWeDo/" + learnMoreClass + "/" + learnMoreId;
                 }
-
-
-
         });
-
-
     }
 
    // public interface

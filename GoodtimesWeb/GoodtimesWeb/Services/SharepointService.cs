@@ -142,6 +142,16 @@ namespace GoodtimesWeb.Services
             {
                 feedItem.EventDate = result.First().NextSibling.InnerText.Trim();
             }
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='Short Description:']");
+            if (result.Any())
+            {
+                feedItem.ShortDescription = result.First().NextSibling.InnerText.Trim();
+            }
+            result = htmlDoc.DocumentNode.SelectNodes("div/b[text()='WelcomeTo:']");
+            if (result.Any())
+            {
+                feedItem.WelcomeTo = result.First().NextSibling.InnerText.Trim();
+            }
             return feedItem;
         }
     }

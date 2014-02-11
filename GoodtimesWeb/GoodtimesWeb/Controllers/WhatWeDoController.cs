@@ -82,6 +82,7 @@ namespace GoodtimesWeb.Controllers
             string url = ConfigurationManager.AppSettings["CampEventsRssFeed"];
             var result = await this.sharepointService.GetCampeEventsAsync(url);
             var selection = from d in result where d.ShowOnWebsite select d;
+            selection.OrderBy(d => d.PublishedOnGmt);
             return PartialView("Events/EventsPartial", new EventsViewModel() { EventsList = selection });
         }
 

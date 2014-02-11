@@ -16,7 +16,7 @@
     display: none;
 }
 
-.camp-summary-right,
+.whatwedo-partial-summary-right,
 .camp-summary-left
 {
     width: 80%;
@@ -31,29 +31,29 @@
     display: inline-block;
 }
 
-.camp-summary-right .camps-membership-label,
-.camp-summary-left .camps-membership-label
+.whatwedo-partial-summary-right .whatwedo-partial-membership-label,
+.camp-summary-left .whatwedo-partial-membership-label
 {
     background-color: #F2F2F2;
     text-align: center;
 }
 
 
-.camp-summary-right h2,
+.whatwedo-partial-summary-right h2,
 .camp-summary-left h2
 {
     margin-top: 5px;
     margin-bottoM: 5px;
 }
 
-.camp-summary-right h4,
+.whatwedo-partial-summary-right h4,
 .camp-summary-left h4
 {
     margin-top: 5px;
     margin-bottoM: 5px;
 }
 
-.camp-summary-right p,
+.whatwedo-partial-summary-right p,
 .camp-summary-left p
 {
     margin-top: 5px;
@@ -62,7 +62,7 @@
     overflow:hidden;
 }
 
-.camps-learn-more-button
+.whatwedo-partial-learn-more-button
 {
     background-color: #cccccc;
     text-align: center;
@@ -72,25 +72,25 @@
     padding-top: 19px;
 }
 
-.camps-learn-more-button:hover
+.whatwedo-partial-learn-more-button:hover
 {
     cursor:pointer;
     color:white;
 }
 
 /* camp summary on the right*/
-.camp-summary-right .left-col
+.whatwedo-partial-summary-right .left-col
 {
     width:75%;
     vertical-align: top;
 }
 
-.camp-summary-right .left-col img
+.whatwedo-partial-summary-right .left-col img
 {
     width: 100%;
 }
 
-.camp-summary-right .right-col
+.whatwedo-partial-summary-right .right-col
 {
     width:20%;
     padding-left: 20px;

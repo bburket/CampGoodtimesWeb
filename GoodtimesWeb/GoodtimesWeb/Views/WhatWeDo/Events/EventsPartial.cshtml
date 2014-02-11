@@ -1,6 +1,77 @@
 ﻿@using GoodtimesWeb.Models.WhatWeDo
 @model EventsViewModel
+@{
+    int eventCount = 0;
+    var slidesImages = new string[]
+    {
+        "one.jpg",
+        "two.jpg",
+        "three.jpg",
+        "four.jpg",
+        "five.jpg",
+        "six.jpg",
+        "seven.jpg",
+        "eight.jpg",
+        "nine.jpg"
+    };
+    var rand = new System.Random((int) DateTime.Now.Ticks & 0x0000FFFF);
+    int jpgIndex = rand.Next(0, slidesImages.Length);
+}
 
+@if (Model == null || Model.EventsList == null || Model.EventsList.Count() <= 0)
+{
+    <p>There are no events to show</p>
+}
+else
+{
+    eventCount = Model.EventsList.Count();
+}
 
-@{string count = Model.EventsList != null ? Model.EventsList.Count().ToString() : (0).ToString();}
-events partial event count: @count
+<!-- The Events partial page is displayed inside the 'WhatWeDo' index page
+     along with all the other partials for WhatWeDo. Currently the partials
+     for Camps,Events and Scholorships are hosted in the WhatWeDo index page.
+    The page content for this partial is driven off of content from the Sharepoint site.
+    -->
+<div id="whatwedo-partial-container">
+    @for (int i = 0; i < eventCount; i++)
+    {
+        var eventElem = Model.EventsList.ElementAt(i);
+        var jpgImageName = "/Content/images/slides/" + slidesImages[jpgIndex++];
+        if (jpgIndex >= slidesImages.Length)
+        {
+            jpgIndex = 0;
+        }
+        if (i % 2 == 0)
+        {
+            <div class="whatwedo-partial-summary-right">
+                <div class="left-col">
+                    <img class="whatwedo-partial-image" src="@jpgImageName"/>
+                </div>
+                <div class="right-col">
+                    <div class="whatwedo-partial-membership-label">@eventElem.WelcomeTo</div>
+                    <h2>@eventElem.Title</h2>
+                    <h4>@eventElem.EventDate</h4>
+                    <p>@eventElem.ShortDescription</p>
+                    <div class="whatwedo-partial-learn-more-button" data-learn-more-class="Events" data-learn-more-id="@eventElem.DetailsPageName">LEARN MORE</div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="camp-summary-left">
+                <div class="left-col">
+                    <div class="whatwedo-partial-membership-label">@eventElem.WelcomeTo</div>
+                    <h2>@eventElem.Title</h2>
+                    <h4>@eventElem.EventDate</h4>
+                    <p>@eventElem.ShortDescription</p>
+                    <div class="whatwedo-partial-learn-more-button" data-learn-more-class="Events" data-learn-more-id="@eventElem.DetailsPageName">LEARN MORE</div>
+                </div>
+                <div class="right-col">
+                    <img class="whatwedo-partial-image" src="@jpgImageName" />
+                </div>
+            </div>
+        }
+
+    }
+</div>
+

@@ -13,5 +13,7 @@ namespace GoodtimesWeb.Models.Sharepoint.Feeds
         public string Author { get; set; }
         public DateTime PublishedOnGmt { get; set; }
         public string Title { get; set; }
+        public string WelcomeTo { get; set;  }
+        public string ShortDescription { get; set; }
     }
 }

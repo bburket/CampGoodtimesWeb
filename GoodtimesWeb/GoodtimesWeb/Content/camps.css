@@ -33,7 +33,9 @@
         margin: 0;
     }
 
-.goodtimes-content
+.goodtimes-content,
+.kayak-content,
+.ski-content
 {
     display:none;
 }

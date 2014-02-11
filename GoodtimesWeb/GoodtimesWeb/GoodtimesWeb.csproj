@@ -167,6 +167,8 @@
   <ItemGroup>
     <Content Include="Content\camps.css" />
     <Content Include="Content\donate.css" />
+    <Content Include="Content\images\Events\11thAnnualGoodtimesWineAuction_logo_maroon.png" />
+    <Content Include="Content\images\Events\wine2.png" />
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
     <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
     <Content Include="Content\images\layout\tab-triangle.png" />
@@ -263,6 +265,9 @@
     <Content Include="Views\WhatWeDo\Events\EventsPartial.cshtml" />
     <Content Include="Views\WhatWeDo\Camps\Kayak.cshtml" />
     <Content Include="Views\WhatWeDo\Camps\Ski.cshtml" />
+    <Content Include="Views\WhatWeDo\Events\HolidayCruise.cshtml" />
+    <Content Include="Views\WhatWeDo\Events\DriveAThon.cshtml" />
+    <Content Include="Views\WhatWeDo\Events\SpringReunion.cshtml" />
     <None Include="Views\WhatWeDo\Events\WineAuction.cshtml" />
     <Content Include="Views\WhatWeDo\Scholarships\ScholarshipsPartial.cshtml" />
   </ItemGroup>

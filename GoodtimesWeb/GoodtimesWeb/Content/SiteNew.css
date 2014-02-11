@@ -75,6 +75,11 @@
         border-radius: 4px;
     }
 
+    #action-nav-menu li a:hover
+    {
+        color:white;
+    }
+
     #info-banner-positioner
     {
         width: 100%;
@@ -112,6 +117,11 @@ margin-bottom: 5px;
         text-decoration: none;
         margin: 5px;
         color: #333333;
+    }
+
+    #info-nav-menu li a:hover
+    {
+        color: lightgray;
     }
     
     /* End Styles for the title banner */
