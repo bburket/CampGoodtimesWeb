@@ -69,7 +69,8 @@ namespace GoodtimesWeb
                 "~/Content/news.css",
                 "~/Content/whoweare.css",
                 "~/Content/whatwedo.css",
-                "~/Content/camps.css"
+                "~/Content/camps.css",
+                "~/Content/connect.css"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css/nivo").Include(

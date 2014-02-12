@@ -113,3 +113,24 @@
     width:80%;
 }
 
+#scholarships-partial-container
+{
+    width: 60%;
+    margin: auto;
+}
+#scholarships-partial-container p
+{
+    text-align: center;
+ 
+}
+#scholarships-partial-container h2
+{
+    text-align: center;
+}
+
+#scholarships-partial-container #apply-button-container
+{
+    width: 150px;
+    margin: auto;
+}
+

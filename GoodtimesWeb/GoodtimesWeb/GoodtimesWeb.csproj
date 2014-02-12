@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\camps.css" />
+    <Content Include="Content\connect.css" />
     <Content Include="Content\donate.css" />
     <Content Include="Content\images\Events\11thAnnualGoodtimesWineAuction_logo_maroon.png" />
     <Content Include="Content\images\Events\wine2.png" />

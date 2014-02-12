@@ -1,0 +1,36 @@
+﻿
+#connect-container
+{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-top:50px;
+    font-size: 14pt;
+}
+
+#connect-container h4
+{
+    text-align: center;
+    margin: 0;
+    font-size: 20pt;
+}
+
+
+#connect-container a
+{
+    text-align: center;
+    display:inline;
+}
+
+
+#connect-container .spacer
+{
+    margin-top: 50px;
+}
+
+#connect-container .info-text
+{
+    text-align: center;
+    margin: 0;
+}
+
