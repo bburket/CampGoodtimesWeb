@@ -3,11 +3,12 @@
 @model EventsViewModel
 
 <div id="selected-event-partial">
-    @if (Model != null)
+    @if (Model != null && !string.IsNullOrWhiteSpace(Model.SelectedEvent))
     {
-        if (!string.IsNullOrWhiteSpace(Model.SelectedEvent))
-        {
-           @Html.Partial("Events/" + Model.SelectedEvent);
-        }
-        }
+        @Html.Partial("Events/" + Model.SelectedEvent);
+    }
+    else
+    {
+        @Html.Action("EventsPartial");
+    }
 </div>

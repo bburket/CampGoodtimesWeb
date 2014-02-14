@@ -2,35 +2,40 @@
 @using GoodtimesWeb.Models.WhatWeDo
 @model CampsIndexViewModel
 
-<!-- The Camps Index page is where all camps are listed and will host partial pages 
-     per camp when one is selected -->
+@* The Camps Index page is where all camps are listed and will host partial pages 
+     per camp when one is selected *@
+
 <div id="camps-nav-container">
     <img id="camps-nav-image" src="/Content/images/slides/eight.jpg" />
-    @if (Model != null)
+    @if (Model.CampTitle != null && Model.CampDate != null)
     {
-        if (Model.CampTitle != null && Model.CampDate != null)
-        {
-            <div id="camp-title-block">
-                <h2>@Model.CampTitle</h2>
-                <h4>@Model.CampDate</h4>
+        <div id="camp-title-block">
+            <h2>@Model.CampTitle</h2>
+            <h4>@Model.CampDate</h4>
+        </div>
+        
+        <div id="menuPositioner">
+            <div class="tabButtons" id="camps-details-button">
+                <p>CAMP DETAILS</p>
+                <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
             </div>
-        }
+            <div class="tabButtons" id="camps-volunteer-button">
+                <p>VOLUNTEER</p>
+                <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
+            </div>
+        </div>
     }
-
-    <div id="menuPositioner">
-        <div class="tabButtons" id="camps-details-button">
-            <p>CAMP DETAILS</p>
-            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
-        </div>
-        <div class="tabButtons" id="camps-volunteer-button">
-            <p>VOLUNTEER</p>
-            <img class="tabButtonsImage" src="/Content/images/layout/tab-triangle.png" />
-        </div>
-    </div>
 </div>
-<div id="camp-content"></div>
+
+<div id="camp-content">
+    @if (Model != null && string.IsNullOrWhiteSpace(Model.SelectedCamp))
+          {
+                @* no camp was selected so render the partial page as the content *@
+              Html.RenderPartial("Camps/CampsPartial");
+          }
+</div>
 <div id="selected-camp-partial">
-    @if (Model != null)
+    @if (Model != null && !string.IsNullOrWhiteSpace(Model.SelectedCamp))
     {
         if (Model.SelectedCamp.Equals("Goodtimes", StringComparison.OrdinalIgnoreCase))
         {

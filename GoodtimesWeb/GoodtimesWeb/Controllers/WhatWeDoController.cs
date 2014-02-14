@@ -74,7 +74,7 @@ namespace GoodtimesWeb.Controllers
 
             }
 
-            return View("Camps/Index");
+            return View("Camps/Index", new CampsIndexViewModel());
         }
 
         public async Task<ActionResult> EventsPartial()
@@ -92,14 +92,14 @@ namespace GoodtimesWeb.Controllers
 
             // We check the RSS feed first. The event has to be 'enabled' in order to display it.            
             var result = await this.sharepointService.GetCampeEventsAsync(url);
-            var selection = from d in result where d.DetailsPageName.Equals(eventName, StringComparison.OrdinalIgnoreCase) select d;
+            var selection = from d in result where d.DetailsPageName.Equals(eventName, StringComparison.OrdinalIgnoreCase) && d.ShowOnWebsite select d;
 
             if (selection.Any())
             {
                 return View("Events/Index", new EventsViewModel() { SelectedEvent = eventName });
             }
 
-            return View("Events/Index", new EventsViewModel() { EventsList = result });
+            return View("Events/Index", new EventsViewModel());
         }
 
         public ActionResult ScholarshipsPartial()
@@ -109,7 +109,7 @@ namespace GoodtimesWeb.Controllers
 
         public ActionResult Scholarships()
         {
-            return RedirectToAction("Index", "WhatWeDo");
+            return View("Scholarships/ScholarshipsPartial");
         }
     }
 }
