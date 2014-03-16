@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GoodtimesWeb</RootNamespace>
     <AssemblyName>GoodtimesWeb</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -165,9 +165,18 @@
     <Compile Include="Services\SharepointService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\camps.css" />
-    <Content Include="Content\connect.css" />
-    <Content Include="Content\donate.css" />
+    <Content Include="Content\CSS\constants.css">
+      <DependentUpon>constants.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\constants.min.css">
+      <DependentUpon>constants.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\site.min.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
     <Content Include="Content\images\Events\11thAnnualGoodtimesWineAuction_logo_maroon.png" />
     <Content Include="Content\images\Events\wine2.png" />
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
@@ -190,55 +199,19 @@
     <Content Include="Content\images\staff\puck.jpg" />
     <Content Include="Content\images\staff\weezerphoto.jpg" />
     <Content Include="Content\images\staff\wings.jpg" />
-    <Content Include="Content\JoinUs.css" />
-    <Content Include="Content\jquery-ui.css" />
-    <Content Include="Content\jquery-ui.redmond.css" />
-    <Content Include="Content\news.css" />
-    <Content Include="Content\nivo\nivo-slider.css" />
-    <Content Include="Content\nivo\themes\bar\arrows.png" />
-    <Content Include="Content\nivo\themes\bar\bar.css" />
-    <Content Include="Content\nivo\themes\bar\bullets.png" />
-    <Content Include="Content\nivo\themes\bar\loading.gif" />
-    <Content Include="Content\nivo\themes\dark\arrows.png" />
-    <Content Include="Content\nivo\themes\dark\bullets.png" />
-    <Content Include="Content\nivo\themes\dark\dark.css" />
-    <Content Include="Content\nivo\themes\dark\loading.gif" />
-    <Content Include="Content\nivo\themes\default\arrows.png" />
-    <Content Include="Content\nivo\themes\default\bullets.png" />
-    <Content Include="Content\nivo\themes\default\default.css" />
-    <Content Include="Content\nivo\themes\default\loading.gif" />
-    <Content Include="Content\nivo\themes\light\arrows.png" />
-    <Content Include="Content\nivo\themes\light\bullets.png" />
-    <Content Include="Content\nivo\themes\light\light.css" />
-    <Content Include="Content\nivo\themes\light\loading.gif" />
-    <Content Include="Content\SiteNew.css" />
     <Content Include="Content\StaffData\staff.json" />
-    <Content Include="Content\tabButtons.css" />
-    <Content Include="Content\volunteer.css" />
-    <Content Include="Content\whatwedo.css" />
-    <Content Include="Content\whoweare.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\DonationsData\Donations.csv" />
+    <Content Include="Content\CSS\site.less" />
+    <Content Include="Content\CSS\constants.less" />
+    <None Include="Properties\PublishProfiles\GoodtimesProjectSeattle.pubxml" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\TwoPairadice.com.pubxml" />
     <Content Include="Scripts\external\jquery-2.0.3.js" />
     <Content Include="Scripts\external\jquery-2.0.3.min.js" />
     <Content Include="Scripts\external\jquery-ui1.10.3.js" />
     <Content Include="Scripts\external\jquery-ui1.10.3.min.js" />
-    <Content Include="Scripts\external\jquery.nivo.slider1.0.0.js" />
-    <Content Include="Scripts\external\jquery.nivo.slider1.0.0.min.js" />
-    <Content Include="Scripts\external\jquery.slides3.0.0.js" />
-    <Content Include="Scripts\external\jquery.slides3.0.0.min.js" />
     <Content Include="Scripts\external\_references.js" />
-    <Content Include="Scripts\Site\camps.js" />
-    <Content Include="Scripts\Site\donate.js" />
-    <Content Include="Scripts\Site\joinus.js" />
-    <Content Include="Scripts\Site\news.js" />
-    <Content Include="Scripts\Site\sitecontroller.js" />
-    <Content Include="Scripts\Site\tabButtons.js" />
-    <Content Include="Scripts\Site\volunteer.js" />
-    <Content Include="Scripts\Site\whatwedo.js" />
-    <Content Include="Scripts\Site\whoweare.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -269,11 +242,13 @@
     <Content Include="Views\WhatWeDo\Events\HolidayCruise.cshtml" />
     <Content Include="Views\WhatWeDo\Events\DriveAThon.cshtml" />
     <Content Include="Views\WhatWeDo\Events\SpringReunion.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
     <None Include="Views\WhatWeDo\Events\WineAuction.cshtml" />
     <Content Include="Views\WhatWeDo\Scholarships\ScholarshipsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Site\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -294,7 +269,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>12935</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:54846/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

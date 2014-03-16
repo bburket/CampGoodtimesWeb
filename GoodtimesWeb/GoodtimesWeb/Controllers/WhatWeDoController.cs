@@ -77,30 +77,30 @@ namespace GoodtimesWeb.Controllers
             return View("Camps/Index", new CampsIndexViewModel());
         }
 
-        public async Task<ActionResult> EventsPartial()
-        {
-            string url = ConfigurationManager.AppSettings["CampEventsRssFeed"];
-            var result = await this.sharepointService.GetCampeEventsAsync(url);
-            var selection = from d in result where d.ShowOnWebsite select d;
-            selection.OrderBy(d => d.PublishedOnGmt);
-            return PartialView("Events/EventsPartial", new EventsViewModel() { EventsList = selection });
-        }
+        //public async Task<ActionResult> EventsPartial()
+        //{
+        //    string url = ConfigurationManager.AppSettings["CampEventsRssFeed"];
+        //    var result = await this.sharepointService.GetCampeEventsAsync(url);
+        //    var selection = from d in result where d.ShowOnWebsite select d;
+        //    selection.OrderBy(d => d.PublishedOnGmt);
+        //    return PartialView("Events/EventsPartial", new EventsViewModel() { EventsList = selection });
+        //}
 
-        public async Task<ActionResult> Events(string eventName)
-        {
-            string url = ConfigurationManager.AppSettings["CampEventsRssFeed"];
+        //public async Task<ActionResult> Events(string eventName)
+        //{
+        //    string url = ConfigurationManager.AppSettings["CampEventsRssFeed"];
 
-            // We check the RSS feed first. The event has to be 'enabled' in order to display it.            
-            var result = await this.sharepointService.GetCampeEventsAsync(url);
-            var selection = from d in result where d.DetailsPageName.Equals(eventName, StringComparison.OrdinalIgnoreCase) && d.ShowOnWebsite select d;
+        //    // We check the RSS feed first. The event has to be 'enabled' in order to display it.            
+        //    var result = await this.sharepointService.GetCampeEventsAsync(url);
+        //    var selection = from d in result where d.DetailsPageName.Equals(eventName, StringComparison.OrdinalIgnoreCase) && d.ShowOnWebsite select d;
 
-            if (selection.Any())
-            {
-                return View("Events/Index", new EventsViewModel() { SelectedEvent = eventName });
-            }
+        //    if (selection.Any())
+        //    {
+        //        return View("Events/Index", new EventsViewModel() { SelectedEvent = eventName });
+        //    }
 
-            return View("Events/Index", new EventsViewModel());
-        }
+        //    return View("Events/Index", new EventsViewModel());
+        //}
 
         public ActionResult ScholarshipsPartial()
         {

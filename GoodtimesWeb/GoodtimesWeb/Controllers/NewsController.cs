@@ -19,19 +19,19 @@ namespace GoodtimesWeb.Controllers
 
         //
         // GET: /News/
-        public async Task<ActionResult> Index()
-        {
-            return View();
-        }
+        //public async Task<ActionResult> Index()
+        //{
+        //    return View();
+        //}
 
-        public async Task<ActionResult> GetCampDirectorNewsFeed()
-        {
-            string url = ConfigurationManager.AppSettings["CampDirectorNewsItemsRssFeed"];
+        //public async Task<ActionResult> GetCampDirectorNewsFeed()
+        //{
+        //    string url = ConfigurationManager.AppSettings["CampDirectorNewsItemsRssFeed"];
 
-            var feeds = await this.sharepointService.GetDirectorNewsFeedAsync(url);
-            feeds.OrderByDescending(article => article.PublishedOnGmt);
-            var content = JsonConvert.SerializeObject(feeds);
-            return Content(content);
-        }
+        //    var feeds = await this.sharepointService.GetDirectorNewsFeedAsync(url);
+        //    feeds.OrderByDescending(article => article.PublishedOnGmt);
+        //    var content = JsonConvert.SerializeObject(feeds);
+        //    return Content(content);
+        //}
     }
 }

@@ -16,22 +16,22 @@ namespace GoodtimesWeb.Tests
     [TestClass]
     public class ControllerTests
     {
-        [TestMethod]
-        public async void TestGetCampeDirectorNewsFeed()
-        {
-            var homeController = CreateHomeController();
+        //[TestMethod]
+        //public async void TestGetCampeDirectorNewsFeed()
+        //{
+        //    var homeController = CreateHomeController();
 
-            var actionResult = await homeController.GetCampDirectorNewsFeedAsync();
-            Assert.IsNotNull(actionResult);
-            Assert.IsTrue(actionResult is ContentResult);
-            var contentResult = actionResult as ContentResult;
+        //    var actionResult = await homeController.GetCampDirectorNewsFeedAsync();
+        //    Assert.IsNotNull(actionResult);
+        //    Assert.IsTrue(actionResult is ContentResult);
+        //    var contentResult = actionResult as ContentResult;
             
-            Assert.IsNotNull(contentResult.Content);
-            var list = JsonConvert.DeserializeObject<IEnumerable<NewsFromTheDirectorElement>>(contentResult.Content);
-            Assert.IsNotNull(list);
-            Assert.IsTrue(list.Any());
-            Assert.IsTrue(list.First().Author.Equals("mike dice"));
-        }
+        //    Assert.IsNotNull(contentResult.Content);
+        //    var list = JsonConvert.DeserializeObject<IEnumerable<NewsFromTheDirectorElement>>(contentResult.Content);
+        //    Assert.IsNotNull(list);
+        //    Assert.IsTrue(list.Any());
+        //    Assert.IsTrue(list.First().Author.Equals("mike dice"));
+        //}
 
 
         private HomeController CreateHomeController()

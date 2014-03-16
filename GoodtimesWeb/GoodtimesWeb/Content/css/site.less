@@ -1,0 +1,32 @@
+﻿@import "constants.less";
+
+.BodyFont
+{
+    font-family: @defaultFontFamily;
+    font-style: @defaultFontStyle;
+    font-weight: @defaultFontWeight;
+    font-size: @defaultFontSize;
+    color: @textNotBoldColor;
+}
+
+.HeadingFonts(@fontSize){
+    font-family: @defaultFontFamily;
+    font-weight: @boldFontWeight;
+    font-style: @defaultFontStyle;
+    font-size: @fontSize;
+    color: @boldFontColor;
+}
+
+/* Some default elements */
+h1{
+    .HeadingFonts(36px);
+}
+h2{
+    .HeadingFonts(27px);
+}
+h3{
+    .HeadingFonts(22px);
+}
+body {
+    .BodyFont;
+}
