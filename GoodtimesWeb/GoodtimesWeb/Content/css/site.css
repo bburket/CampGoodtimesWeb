@@ -10,6 +10,11 @@
   font-size: 22px;
   color: #a6b1cc;
 }
+.HeaderNavLinks {
+  font-weight: 700;
+  font-size: 18pt;
+  color: #FFF;
+}
 /* Some default elements */
 h1 {
   font-family: "proxima-nova";
@@ -38,4 +43,60 @@ body {
   font-weight: 600;
   font-size: 22px;
   color: #a6b1cc;
+}
+#page-header {
+  background-color: #adbcbc;
+  height: 70px;
+  -moz-opacity: .65;
+  opacity: .65;
+  width: 100%;
+  /* The Good Times PRoject link left side of banner*/
+  /* Nav links on right side of banner*/
+}
+#page-header a#goodtimes-link {
+  float: left;
+  margin-top: 15px;
+  margin-left: 40px;
+  text-decoration: none;
+}
+#page-header a#goodtimes-link img {
+  height: 38px;
+}
+#page-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#page-header ul li {
+  display: inline;
+  float: right;
+}
+#page-header ul li span {
+  margin-top: 15px;
+  display: block;
+}
+#page-header ul li a {
+  font-weight: 700;
+  font-size: 18pt;
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+#page-header ul li a.noDonate:hover {
+  background-color: #eaeff9;
+  -moz-opacity: .9;
+  opacity: .9;
+}
+#page-header ul li a.donate {
+  background-color: #ffc91d;
+}
+#page-header ul li#last {
+  margin-right: 40px;
 }
