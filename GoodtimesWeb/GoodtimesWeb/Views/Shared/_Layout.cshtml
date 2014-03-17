@@ -15,9 +15,9 @@
 <body>
 <div id="content-container">
     @{Html.RenderPartial("Header");}
-
-    @RenderBody()
-
+    <div id="page-body">
+        @RenderBody()
+    </div>
     @{Html.RenderPartial("Footer");}
 
 </div>

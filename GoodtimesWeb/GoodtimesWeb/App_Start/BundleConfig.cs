@@ -15,7 +15,8 @@ namespace GoodtimesWeb
                         "~/Scripts/external/jquery-ui{version}.js"));
 
             bundles.Add(new StyleBundle("~/Content/CSS/SiteMain").Include(
-                "~/Content/CSS/site.css" ));
+                "~/Content/CSS/site.css",
+                "~/Content/CSS/pageheader.css"));
         }
     }
 }

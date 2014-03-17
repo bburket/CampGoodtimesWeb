@@ -171,6 +171,12 @@
     <Content Include="Content\CSS\constants.min.css">
       <DependentUpon>constants.less</DependentUpon>
     </Content>
+    <Content Include="Content\CSS\pageheader.css">
+      <DependentUpon>pageheader.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\pageheader.min.css">
+      <DependentUpon>pageheader.less</DependentUpon>
+    </Content>
     <Content Include="Content\CSS\site.css">
       <DependentUpon>site.less</DependentUpon>
     </Content>
@@ -204,6 +210,7 @@
     <Content Include="Content\DonationsData\Donations.csv" />
     <Content Include="Content\CSS\site.less" />
     <Content Include="Content\CSS\constants.less" />
+    <Content Include="Content\CSS\pageheader.less" />
     <None Include="Properties\PublishProfiles\GoodtimesProjectSeattle.pubxml" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\TwoPairadice.com.pubxml" />

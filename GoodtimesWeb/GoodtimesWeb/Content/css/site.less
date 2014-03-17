@@ -9,7 +9,8 @@
     color: @textNotBoldColor;
 }
 
-.HeadingFonts(@fontSize){
+.HeadingFonts(@fontSize)
+{
     font-family: @defaultFontFamily;
     font-weight: @boldFontWeight;
     font-style: @defaultFontStyle;
@@ -17,98 +18,28 @@
     color: @boldFontColor;
 }
 
-.HeaderNavLinks{
-    font-weight: @boldFontWeight;
-    font-size: 18pt;
-    color: #FFF;
-}
+
 
 /* Some default elements */
-h1{
+h1
+{
     .HeadingFonts(36px);
 }
-h2{
+
+h2
+{
     .HeadingFonts(27px);
 }
-h3{
+
+h3
+{
     .HeadingFonts(22px);
 }
-body {
+
+body
+{
     .BodyFont;
 }
 
-#page-header
-{
-    background-color: @grayHeaderBanner;
-    height: 70px;
-    -moz-opacity: .65;
-    opacity: .65;
-    width: 100%;
-    
 
-    /* The Good Times PRoject link left side of banner*/
-    a#goodtimes-link
-    {
-        float: left;
-        margin-top:15px;
-        margin-left: 40px;
-        text-decoration: none;
-        img
-        {
-            
-            height:38px;
-        }
-    }
 
-    /* Nav links on right side of banner*/
-    ul
-    {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        li
-        {
-            display: inline;
-            float: right;
-
-            span
-            {
-                margin-top: 15px;
-                display: block;
-            }
-
-            a
-            {
-                .HeaderNavLinks;
-                display: block;
-                text-decoration: none;
-                padding-left: 20px;
-                padding-right: 20px;
-                -moz-border-radius: 3px;
-                -webkit-border-radius: 3px;
-                border-radius: 3px;
-                padding-top: 4px;
-                padding-bottom: 5px;
-            }
-
-                a.noDonate:hover
-                {
-                    background-color: @grayLight;
-                    -moz-opacity: .9;
-                    opacity: .9;
-                }
-
-                a.donate
-                {
-                    background-color: @colorThirdPrimary;
-                }
-
-        }
-
-            li#last
-            {
-                margin-right: 40px;
-            }
-    }
-}
