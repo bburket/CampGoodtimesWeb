@@ -171,6 +171,12 @@
     <Content Include="Content\CSS\constants.min.css">
       <DependentUpon>constants.less</DependentUpon>
     </Content>
+    <Content Include="Content\CSS\pagefooter.css">
+      <DependentUpon>pagefooter.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\pagefooter.min.css">
+      <DependentUpon>pagefooter.less</DependentUpon>
+    </Content>
     <Content Include="Content\CSS\pageheader.css">
       <DependentUpon>pageheader.less</DependentUpon>
     </Content>
@@ -185,6 +191,9 @@
     </Content>
     <Content Include="Content\images\Events\11thAnnualGoodtimesWineAuction_logo_maroon.png" />
     <Content Include="Content\images\Events\wine2.png" />
+    <Content Include="Content\images\layout\banner-placeholder1.png" />
+    <Content Include="Content\images\layout\banner-placeholder2.png" />
+    <Content Include="Content\images\layout\banner-placeholder3.png" />
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
     <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
     <Content Include="Content\images\layout\tab-triangle.png" />
@@ -211,6 +220,7 @@
     <Content Include="Content\CSS\site.less" />
     <Content Include="Content\CSS\constants.less" />
     <Content Include="Content\CSS\pageheader.less" />
+    <Content Include="Content\CSS\pagefooter.less" />
     <None Include="Properties\PublishProfiles\GoodtimesProjectSeattle.pubxml" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\TwoPairadice.com.pubxml" />

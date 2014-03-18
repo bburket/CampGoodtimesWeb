@@ -16,7 +16,8 @@ namespace GoodtimesWeb
 
             bundles.Add(new StyleBundle("~/Content/CSS/SiteMain").Include(
                 "~/Content/CSS/site.css",
-                "~/Content/CSS/pageheader.css"));
+                "~/Content/CSS/pageheader.css",
+                "~/Content/CSS/pagefooter.css"));
         }
     }
 }

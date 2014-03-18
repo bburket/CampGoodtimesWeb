@@ -38,4 +38,13 @@ body {
   font-weight: 600;
   font-size: 22px;
   color: #a6b1cc;
+  margin: 0;
+}
+#content-container {
+  position: relative;
+  top: -70px;
+}
+#page-body {
+  width: 1280px;
+  margin: auto;
 }
