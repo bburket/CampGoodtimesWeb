@@ -42,9 +42,10 @@
 }
 #page-header a#goodtimes-link {
   display: inline;
+  text-decoration: none;
 }
 #page-header a#goodtimes-link img {
-  width: 170px;
+  border: 0;
 }
 #page-header ul {
   list-style-type: none;

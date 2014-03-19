@@ -196,6 +196,7 @@
     <Content Include="Content\images\layout\banner-placeholder3.png" />
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
     <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
+    <Content Include="Content\images\layout\goodtimes_logo_white_small.png" />
     <Content Include="Content\images\layout\tab-triangle.png" />
     <Content Include="Content\images\slides\eight.jpg" />
     <Content Include="Content\images\slides\five.jpg" />
