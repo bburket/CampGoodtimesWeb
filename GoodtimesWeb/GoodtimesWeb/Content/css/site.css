@@ -1,4 +1,4 @@
-/*Font defaults*/
+﻿/*Font defaults*/
 /* Font colors */
 /* Grays */
 /* General Colors */
@@ -56,6 +56,22 @@ body {
 #home-image {
   display: block;
 }
+#home-heart {
+  color: red;
+  font-size: 150%;
+}
+#home-sponsors-container {
+  height: 200px;
+  color: white;
+  text-align: center;
+  background-color: #ffc91d;
+}
+#home-sponsors-container #caption {
+  line-height: 100px;
+}
+#home-sponsors-container #sponsorbar {
+  line-height: 100px;
+}
 #home-buttonbar {
   background-color: #adbcbc;
   text-align: center;
@@ -96,3 +112,4 @@ body {
   -moz-opacity: .9;
   opacity: .9;
 }
+/*# sourceMappingURL=site.css.map */

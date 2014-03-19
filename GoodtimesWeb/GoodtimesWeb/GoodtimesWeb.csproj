@@ -194,6 +194,7 @@
     <Content Include="Content\images\layout\banner-placeholder1.png" />
     <Content Include="Content\images\layout\banner-placeholder2.png" />
     <Content Include="Content\images\layout\banner-placeholder3.png" />
+    <Content Include="Content\images\layout\donor-banner1.png" />
     <Content Include="Content\images\layout\goodtimes-loading.gif" />
     <Content Include="Content\images\layout\Goodtimesbanner-new.png" />
     <Content Include="Content\images\layout\goodtimes_logo_white_small.png" />
@@ -222,6 +223,18 @@
     <Content Include="Content\CSS\constants.less" />
     <Content Include="Content\CSS\pageheader.less" />
     <Content Include="Content\CSS\pagefooter.less" />
+    <Content Include="Content\CSS\pagefooter.css.map">
+      <DependentUpon>pagefooter.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\constants.css.map">
+      <DependentUpon>constants.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\pageheader.css.map">
+      <DependentUpon>pageheader.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\GoodtimesProjectSeattle.pubxml" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\TwoPairadice.com.pubxml" />

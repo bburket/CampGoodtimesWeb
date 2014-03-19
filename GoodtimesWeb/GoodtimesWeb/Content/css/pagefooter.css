@@ -1,4 +1,4 @@
-/*Font defaults*/
+﻿/*Font defaults*/
 /* Font colors */
 /* Grays */
 /* General Colors */
@@ -17,9 +17,12 @@
 }
 #footer-sociallinks {
   height: 120px;
+  line-height: 120px;
   background-color: #474b59;
 }
 #footer-signature {
   height: 30px;
+  line-height: 30px;
   background-color: #3c3f4a;
 }
+/*# sourceMappingURL=pagefooter.css.map */
